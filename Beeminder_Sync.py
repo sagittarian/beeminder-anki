@@ -19,9 +19,9 @@
 ACCOUNT = "your account" # beeminder account name
 TOKEN   = "your token"   # available at <https://www.beeminder.com/api/v1/auth_token.json>
 
-# Goals - Set either to "" if you don't use this kind of goal.
-REP_GOAL = "" # goal for total reviews / day;
-NEW_GOAL = "" # goal for new cards / day;
+# Goal names - Set either to "" if you don't use this kind of goal. The name is the short part in the URL.
+REP_GOAL = "anki" # Goal for total reviews / day, e.g. "anki" if your goal is called "anki".
+NEW_GOAL = ""     # goal for new cards / day, e.g. "anki-new".
 
 # Offsets - Skip that many earlier reps so your graph can start at 0 (for old decks - set to 0 if unsure).
 REP_OFFSET = 0
