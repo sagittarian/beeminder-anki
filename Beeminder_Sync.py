@@ -62,9 +62,9 @@ def checkCollection(col=None, force=False):
 
     # new cards
     if NEW_GOAL:
-        new_cards      = col.db.first("select count() from revlog where type = 0 and ivl > 0")[0]
+        new_cards      = col.db.first("select count(distinct(cid)) from revlog where type = 0")[0]
         last_timestamp = col.conf.get("beeminderNewTimestamp", 0)
-        timestamp      = col.db.first("select id/1000 from revlog where type = 0 and ivl > 0 order by id desc limit 1")[0]
+        timestamp      = col.db.first("select id/1000 from revlog where type = 0 order by id desc limit 1")[0]
         reportCards(col, new_cards, timestamp, "beeminderNewTotal", NEW_GOAL, NEW_OFFSET)
 
         if (force or timestamp != last_timestamp) and SEND_DATA:
