@@ -4,7 +4,7 @@ It supports tracking all your reviews and just new cards. It's still somewhat ex
 
 Installation:
 
-Copy Beeminder_Sync.py into your add-on folder (~/.anki/addons/ on Linux, or ~/Documents/Anki/addons/ on Mac) or install through Anki (Tools -> Add-ons -> Browse & Install) with code [3491889895](https://beta.ankiweb.net/shared/info/3491889895).
+Copy Beeminder_Sync.py into your add-on folder (~/Anki/addons/ on Linux, or ~/Documents/Anki/addons/ on Mac) or install through Anki (Tools -> Add-ons -> Browse & Install) with code [3491889895](https://beta.ankiweb.net/shared/info/3491889895).
 
 Instructions:
 
