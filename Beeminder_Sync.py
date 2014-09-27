@@ -53,7 +53,9 @@ def checkCollection(col=None, force=False):
     if REP_GOAL:
         reps           = col.db.first("select count() from revlog")[0]
         last_timestamp = col.conf.get("beeminderRepTimestamp", 0)
-        timestamp      = col.db.first("select id/1000 from revlog order by id desc limit 1")[0]
+        timestamp      = col.db.first("select id/1000 from revlog order by id desc limit 1")
+        if timestamp is not None:
+            timestamp = timestamp[0]
         reportCards(col, reps, timestamp, "beeminderRepTotal", REP_GOAL, REP_OFFSET)
 
         if (force or timestamp != last_timestamp) and SEND_DATA:
